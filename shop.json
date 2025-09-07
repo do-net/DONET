@@ -1,5 +1,169 @@
 {
-  "version": "1.1.0",
-  "notes": "🚀 New Features! You can now enjoy an enhanced user interface and several performance improvements. We've also added new items to the shop for you to discover.",
-  "forceUpdateBelow": "1.1.0"
+    "groups": {
+        "name": "Groups",
+        "items": [
+            {
+                "id": "shop_item_group_1",
+                "name": "Oceanic Group",
+                "icon": "🌊",
+                "price": 1000,
+                "inventoryItem": {
+                    "type": "group",
+                    "icon": "📁",
+                    "groupState": {
+                        "title": "Oceanic Group",
+                        "gradient": "linear-gradient(135deg, #e0c3fc 0%, #8ec5fc 100%)",
+                        "width": 550,
+                        "height": 450
+                    },
+                    "childCardStates": []
+                }
+            },
+            {
+                "id": "shop_item_group_2",
+                "name": "Dev Workspace",
+                "icon": "💻",
+                "price": 1200,
+                "inventoryItem": {
+                    "type": "group",
+                    "icon": "📁",
+                    "groupState": {
+                        "title": "Dev Workspace",
+                        "gradient": "linear-gradient(135deg, #485461 0%, #28313b 100%)",
+                        "width": 600,
+                        "height": 500
+                    },
+                    "childCardStates": []
+                }
+            }
+        ]
+    },
+    "sites": {
+        "name": "Sites",
+        "items": [
+            {
+                "id": "shop_item_site_1",
+                "name": "Neon Search",
+                "icon": "💡",
+                "price": 500,
+                "inventoryItem": {
+                    "type": "website",
+                    "icon": "🌐",
+                    "cardState": {
+                        "url": "https://www.google.com/search?igu=1&q=%s",
+                        "headerGradient": "linear-gradient(135deg, #8afffd 0%, #00ff9c 100%)"
+                    }
+                }
+            },
+            {
+                "id": "shop_item_site_2",
+                "name": "Developer Docs",
+                "icon": "📚",
+                "price": 450,
+                "inventoryItem": {
+                    "type": "website",
+                    "icon": "🌐",
+                    "cardState": {
+                        "url": "https://developer.mozilla.org/en-US/search?q=%s",
+                        "headerGradient": "linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%)"
+                    }
+                }
+            }
+        ]
+    },
+    "prompts": {
+        "name": "Prompts",
+        "items": [
+            {
+                "id": "shop_item_prompt_1",
+                "name": "Poetic Prompt",
+                "icon": "📜",
+                "price": 250,
+                "inventoryItem": {
+                    "type": "prompt",
+                    "icon": "💬",
+                    "template": "write a haiku about %subject%"
+                }
+            },
+            {
+                "id": "shop_item_prompt_2",
+                "name": "Code Explainer",
+                "icon": "👨‍💻",
+                "price": 350,
+                "inventoryItem": {
+                    "type": "prompt",
+                    "icon": "💬",
+                    "template": "Explain the following code snippet in simple terms for a beginner: %code_snippet%"
+                }
+            }
+        ]
+    },
+    "images": {
+        "name": "Images",
+        "items": [
+            {
+                "id": "shop_item_image_1",
+                "name": "Landscape Image",
+                "icon": "🏞️",
+                "price": 300,
+                "inventoryItem": {
+                    "type": "image_link",
+                    "icon": "🔗",
+                    "url": "https://source.unsplash.com/random/800x600/?landscape"
+                }
+            },
+            {
+                "id": "shop_item_image_2",
+                "name": "Cute Cat",
+                "icon": "🐈",
+                "price": 300,
+                "inventoryItem": {
+                    "type": "image_link",
+                    "icon": "🔗",
+                    "url": "https://source.unsplash.com/random/800x600/?cute,cat"
+                }
+            }
+        ]
+    },
+    "widgets": {
+        "name": "Widgets",
+        "items": [
+            {
+                "id": "shop_item_widget_1",
+                "name": "Clock Widget",
+                "icon": "⏰",
+                "price": 750,
+                "inventoryItem": {
+                    "type": "widget",
+                    "icon": "⚙️",
+                    "cardState": {
+                        "type": "widget",
+                        "width": 250,
+                        "height": 250,
+                        "htmlCode": "<div id='clock'></div>",
+                        "cssCode": "body { display: flex; justify-content: center; align-items: center; height: 100%; background: #222; } #clock { font-family: monospace; font-size: 2.5em; color: #0f0; text-shadow: 0 0 10px #0f0; }",
+                        "jsCode": "function updateClock() { const now = new Date(); document.getElementById('clock').textContent = now.toLocaleTimeString(); } setInterval(updateClock, 1000); updateClock();"
+                    }
+                }
+            },
+            {
+                "id": "shop_item_widget_2",
+                "name": "Weather Widget",
+                "icon": "🌦️",
+                "price": 850,
+                "inventoryItem": {
+                    "type": "widget",
+                    "icon": "⚙️",
+                    "cardState": {
+                        "type": "widget",
+                        "width": 300,
+                        "height": 200,
+                        "htmlCode": "<h3>Simple Weather</h3><p>It's sunny!</p><p>24°C</p>",
+                        "cssCode": "body { font-family: sans-serif; text-align: center; background: linear-gradient(to bottom, #87CEEB, #f0f8ff); color: #333; padding-top: 20px;}",
+                        "jsCode": "console.log('Weather widget loaded.');"
+                    }
+                }
+            }
+        ]
+    }
 }
